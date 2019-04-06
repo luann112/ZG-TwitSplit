@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Router from 'next/router';
+import { connect } from 'react-redux';
+import { actions } from 'src/reducers/auth';
 import {
   HomeWrapperStyled,
   UserWrapperStyled,
@@ -9,19 +10,18 @@ import {
 } from './Home.styles';
 import Avatar from 'src/components/avatar';
 import { SAMPLE_USERS } from 'lib/enums';
+import UserTile from './components/userTile';
 
 class Home extends Component {
-  toChatPage = () => {
-    Router.push('/chat/')
-  }
-  renderUser = (user) => {
-    return (
-      <UserWrapperStyled key={user.id} onClick={this.toChatPage}>
-        <Avatar src={user.avatar} />
-        <UserNameStyled>{user.name}</UserNameStyled>
-      </UserWrapperStyled>
-    );
-  }
+
+  renderUser = (user) => (
+    <UserTile 
+      key={user.id}
+      user={user}
+      initUser={this.props.initUser}
+    />
+  );
+  
   render() {
     return (
       <HomeWrapperStyled className="container">
@@ -34,4 +34,9 @@ class Home extends Component {
   }
 }
 
-export default Home;
+const mapStateToProps = () => ({});
+const mapDispatchToProps = {
+  initUser: actions.initUser,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

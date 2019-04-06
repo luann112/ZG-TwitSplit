@@ -18,7 +18,7 @@ export const actions = {
   updateUser,
 }
 
-const chatBoxReducer = (state = initialState, action) => {
+const usersBoxReducer = (state = initialState, action) => {
   const newState = Object.assign({}, state);
   switch (action.type) {
     case SELECT_CHANNEL:
@@ -40,4 +40,4 @@ const chatBoxReducer = (state = initialState, action) => {
   }
 };
 
-export default chatBoxReducer;
+export default usersBoxReducer;

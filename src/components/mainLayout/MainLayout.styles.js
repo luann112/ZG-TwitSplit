@@ -15,11 +15,13 @@ export const MainContentWrapperStyled = styled.section`
   font-family: 'Raleway', sans-serif;
   .container {
     flex: 1;
-    width: 100%;
     padding-right: 10px;
     padding-left: 10px;
     margin-right: auto;
     margin-left: auto;
     width: 80%;
+    @media (max-width: 940px) {
+      width: 90%;
+    }
   }
 `;

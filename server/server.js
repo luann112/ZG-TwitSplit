@@ -10,6 +10,7 @@ const port = 3000;
 app.prepare()
   .then(() => {
     const server = express();
+
     server.get('*', (req, res) => {
       return handle(req, res);
     });
