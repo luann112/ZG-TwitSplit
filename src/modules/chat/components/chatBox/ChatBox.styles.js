@@ -3,7 +3,7 @@ import { boxShadow } from 'styles/common';
 import { slideToLeft } from 'styles/animation';
 
 export const ChatBoxWrapperStyled = styled.div`
-  width: 60%;
+  width: 50%;
   height: 70%;
   box-shadow: ${boxShadow};
   padding: 0px 0px 1em;

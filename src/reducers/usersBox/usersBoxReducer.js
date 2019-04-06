@@ -1,28 +1,30 @@
 export const SAMPLE_ACTION = 'usersBox/SAMPLE_ACTION';
-export const SELECT_CHANNEL = 'usersBox/SELECT_CHANNEL';
+export const SELECT_CONNECTION = 'usersBox/SELECT_CONNECTION';
 export const UPDATE_USER = 'usersBox/UPDATE_USER';
 
 
 const initialState = {
   usersData: {},
-  selectedChannel: 'broadcast',
+  selectedConnectionId: 'broadcast',
+  selectedConnectionName: 'Broadcast'
 };
 
 // action creator
 
-const selectChannel = (id) => ({ type: SELECT_CHANNEL, id });
+const selectConnection = (id, name) => ({ type: SELECT_CONNECTION, id, name });
 const updateUser = (userData) => ({ type: UPDATE_USER, userData });
 
 export const actions = {
-  selectChannel,
+  selectConnection,
   updateUser,
 }
 
 const usersBoxReducer = (state = initialState, action) => {
   const newState = Object.assign({}, state);
   switch (action.type) {
-    case SELECT_CHANNEL:
-      newState.selectedChannel = action.id;
+    case SELECT_CONNECTION:
+      newState.selectedConnectionId = action.id;
+      newState.selectedConnectionName = action.name;
       return newState;
 
     case UPDATE_USER: {

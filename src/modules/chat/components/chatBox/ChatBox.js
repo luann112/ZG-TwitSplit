@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { ChatBoxWrapperStyled } from './ChatBox.styles';
-import ChatBoxHeader from '../chatBoxHeader';
+import ChatBoxHeader from '../../containers/chatBoxHeader';
 import ChatBoxContent from '../chatBoxContent';
 import ChatBoxInput from '../chatBoxInput';
 

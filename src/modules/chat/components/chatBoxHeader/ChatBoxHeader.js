@@ -12,7 +12,9 @@ class ChatBoxHeader extends Component {
     return (
       <ChatBoxHeaderWrapperStyled>
         <ChatBoxHeaderInnerWrapperStyled>
-          <Avatar />
+          <Avatar small 
+            src="/static/img/thanos.jpg"
+          />
           <UserNameStyled>Jan</UserNameStyled>
         </ChatBoxHeaderInnerWrapperStyled>
       </ChatBoxHeaderWrapperStyled>
