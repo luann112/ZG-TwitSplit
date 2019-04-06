@@ -1,2 +1,2 @@
 export { default } from './usersBoxReducer';
-export { action } from './usersBoxReducer';
+export { actions } from './usersBoxReducer';

@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
 import {
-  ChatBoxHeaderStyled,
+  ChatBoxHeaderWrapperStyled,
+  ChatBoxHeaderInnerWrapperStyled,
   AvatarsWrapperStyled,
   UserNameStyled
 } from './ChatBoxHeader.styles';
+import Avatar from 'src/components/avatar';
 
 class ChatBoxHeader extends Component {
   render() {
     return (
-      <ChatBoxHeaderStyled>
-        <AvatarsWrapperStyled></AvatarsWrapperStyled>
-        <UserNameStyled>Jan</UserNameStyled>
-      </ChatBoxHeaderStyled>
+      <ChatBoxHeaderWrapperStyled>
+        <ChatBoxHeaderInnerWrapperStyled>
+          <Avatar />
+          <UserNameStyled>Jan</UserNameStyled>
+        </ChatBoxHeaderInnerWrapperStyled>
+      </ChatBoxHeaderWrapperStyled>
     );
   }
 }

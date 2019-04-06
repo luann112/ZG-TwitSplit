@@ -1,1 +1,1 @@
-export { default } from './chatPage';
+export { default } from './home';

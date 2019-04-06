@@ -1,6 +1,12 @@
-export const SAMPLE_ACTION = 'topNavBar/SAMPLE_ACTION';
+export const SAMPLE_ACTION = 'chatBox/SAMPLE_ACTION';
+export const SEND_MESSAGE = 'chatBox/SEND_MESSAGE';
+
+const initialChatData = {
+  'broadcast': {}
+}
 
 const initialState = {
+  chatData: initialChatData
 };
 
 // action creator

@@ -10,4 +10,6 @@ export const ChatBoxWrapperStyled = styled.div`
   background: rgb(255, 255, 255);
   border-radius: 0.3em;
   animation: ${slideToLeft} 1s ease;
+  display: flex;
+  flex-direction: column;
 `;

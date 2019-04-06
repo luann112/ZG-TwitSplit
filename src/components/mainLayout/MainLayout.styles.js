@@ -12,7 +12,7 @@ export const MainContentWrapperStyled = styled.section`
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  font-family: 'Roboto';
+  font-family: 'Raleway', sans-serif;
   .container {
     flex: 1;
     width: 100%;
@@ -22,25 +22,4 @@ export const MainContentWrapperStyled = styled.section`
     margin-left: auto;
     width: 80%;
   }
-
-  /* @media (min-width: 576px) {
-    .container {
-      max-width: 540px;
-    }
-  }
-  @media (min-width: 768px) {
-    .container {
-      max-width: 750px;
-    }
-  }
-  @media (min-width: 992px) {
-    .container {
-      max-width: 960px;
-    }
-  }
-  @media (min-width: 1320px) {
-    .container {
-      max-width: 1260px;
-    }
-  } */
 `;

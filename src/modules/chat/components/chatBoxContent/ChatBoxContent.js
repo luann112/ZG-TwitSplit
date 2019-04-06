@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-
+import {
+  ChatBoxContentWrapperStyled
+} from './ChatBoxContent.styles';
 class ChatBoxContent extends Component {
   render() {
     return (
-      <div>
+      <ChatBoxContentWrapperStyled>
         
-      </div>
+      </ChatBoxContentWrapperStyled>
     );
   }
 }
