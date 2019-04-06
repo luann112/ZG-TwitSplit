@@ -5,7 +5,6 @@ import {
   MainLayoutWrapperStyled,
   MainContentWrapperStyled,
  } from './MainLayout.styles';
- import TopNavbar from 'src/containers/topNavBar';
 
 
 class MainLayout extends PureComponent {
@@ -14,7 +13,6 @@ class MainLayout extends PureComponent {
     return [
       <Head />,
       <MainLayoutWrapperStyled>
-        <TopNavbar />
         <MainContentWrapperStyled>
           {children}
         </MainContentWrapperStyled>

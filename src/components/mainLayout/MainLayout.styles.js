@@ -3,12 +3,11 @@ import styled from 'styled-components';
 export const MainLayoutWrapperStyled = styled.div`
   position: relative;
   display: flex;
-  flex-direction: column;
   height: 100vh;
+  background-color: rgb(239, 239, 239);
 `;
 
 export const MainContentWrapperStyled = styled.section`
-  background-color: #f5f5f5;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -21,9 +20,10 @@ export const MainContentWrapperStyled = styled.section`
     padding-left: 10px;
     margin-right: auto;
     margin-left: auto;
+    width: 80%;
   }
 
-  @media (min-width: 576px) {
+  /* @media (min-width: 576px) {
     .container {
       max-width: 540px;
     }
@@ -42,5 +42,5 @@ export const MainContentWrapperStyled = styled.section`
     .container {
       max-width: 1260px;
     }
-  }
+  } */
 `;

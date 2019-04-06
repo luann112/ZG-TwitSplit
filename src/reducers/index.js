@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import topNavBarReducer from './topNavBar';
+import chatBoxReducer from './chatBox';
+import usersBoxReducer from './usersBox';
 
 const rootReducer = combineReducers({
-  topNavBar: topNavBarReducer,
+  chatBox: chatBoxReducer,
+  usersBox: usersBoxReducer,
 });
 
 export default rootReducer;
