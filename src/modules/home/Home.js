@@ -14,7 +14,7 @@ import UserTile from './components/userTile';
 
 class Home extends Component {
 
-  renderUser = (user) => (
+  renderUser = (user) => user.id !== 'broadcast' && (
     <UserTile 
       key={user.id}
       user={user}

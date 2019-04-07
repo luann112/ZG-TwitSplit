@@ -9,7 +9,7 @@ export const HomeWrapperStyled = styled.div`
   justify-content: center;
 `;
 export const TextStyled = styled.div`
-  font-size: 1.6em;
+  font-size: 2em;
   color: rgba(0,0,0,.54);
 `;
 export const UsersWrapperStyled = styled.div`

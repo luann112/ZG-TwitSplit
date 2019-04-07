@@ -2,8 +2,8 @@ export const INIT_USER = 'auth/INIT_USER';
 
 
 const initialState = {
-  userId: null,
-  userName: null,
+  userId: 'user1',
+  userName: 'Thanos',
 };
 
 // action creator

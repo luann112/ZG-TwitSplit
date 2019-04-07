@@ -7,7 +7,7 @@ export const UserTileWrapperStyled = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 5px;
+  padding: 10px;
   margin: 0 5px;
   cursor: pointer;
   background: rgb(255, 255, 255);
@@ -22,6 +22,7 @@ export const UserTileWrapperStyled = styled.div`
   @media (max-width: 768px) {
     flex-direction: row;
     justify-content: flex-start;
+    padding: 5px;
     margin: 5px 0;
     width: 80%;
   }

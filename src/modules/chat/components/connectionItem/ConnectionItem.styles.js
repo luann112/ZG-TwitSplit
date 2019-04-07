@@ -16,7 +16,6 @@ export const ConnectionItemWrapperStyled = styled.div`
 `;
 
 export const ConnectionDetailStyled = styled.div`
-  flex: 1;
   flex-direction: column;
   margin-left: 10px;
 `;
@@ -31,4 +30,9 @@ export const LastMessageStyled = styled.div`
   padding: 5px;
   font-style: italic;
   color: rgba(0,0,0,.54);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 55%;
 `;

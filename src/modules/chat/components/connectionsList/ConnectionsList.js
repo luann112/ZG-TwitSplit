@@ -2,37 +2,26 @@ import React, { Component } from 'react';
 import { 
   ConnectionsListWrapperStyled
 } from './ConnectionsList.styles';
-import ConnectionItem from '../../containers/ConnectionItem';
+import ConnectionItem from '../../containers/connectionItem';
 
 
-class ConnectionList extends Component {
+class ConnectionsList extends Component {
+
+  renderConnectionItem = (connection) => (
+    <ConnectionItem
+      key={connection.id}
+      connection={connection}
+    />
+  )
+
   render() {
+    const { connectionsListData = [] } = this.props;
     return (
       <ConnectionsListWrapperStyled>
-        <ConnectionItem 
-        />
-        <ConnectionItem />
-        <ConnectionItem />
-        <ConnectionItem />
-        <ConnectionItem />
-        <ConnectionItem />
-        <ConnectionItem />
-        <ConnectionItem />
-        <ConnectionItem />
-        <ConnectionItem />
-        <ConnectionItem />
-        <ConnectionItem />
-        <ConnectionItem />
-        <ConnectionItem />
-        <ConnectionItem />
-        <ConnectionItem />
-        <ConnectionItem />
-        <ConnectionItem />
-        <ConnectionItem />
-        
+        {connectionsListData.map(this.renderConnectionItem)}
       </ConnectionsListWrapperStyled>
     );
   }
 }
 
-export default ConnectionList;
+export default ConnectionsList;

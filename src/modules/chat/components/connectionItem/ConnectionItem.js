@@ -16,16 +16,18 @@ class ConnectionItem extends Component {
     }
   }
   render() {
-    const { connection = {} } = this.props;
-    const { avatar = '/static/img/iron-man.jpg' } = connection;
+    const { connection = {}, selectedConnectionId } = this.props;
+    const { id, avatar, name, latestMessage } = connection;
     return (
-      <ConnectionItemWrapperStyled>
-        <Avatar small src={avatar} />
+      <ConnectionItemWrapperStyled
+        onClick={this.selectConnection}
+        isActive={selectedConnectionId === id}>
+        <Avatar size="small" src={avatar} />
         <ConnectionDetailStyled>
           <UserNameStyled>
-            Luan Nguyen
+            {name}
           </UserNameStyled>
-          <LastMessageStyled>This is last message</LastMessageStyled>
+          <LastMessageStyled>{latestMessage.message || ''}</LastMessageStyled>
         </ConnectionDetailStyled>
       </ConnectionItemWrapperStyled>
     );

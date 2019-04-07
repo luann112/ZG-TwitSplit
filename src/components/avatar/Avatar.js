@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { AvatarWrapperStyled } from './Avatar.styles';
 
-const  Avatar = ({ src, small = false }) => (
-  <AvatarWrapperStyled small={small}>
+const  Avatar = ({ src, size }) => (
+  <AvatarWrapperStyled size={size}>
     <img src={src}/>
   </AvatarWrapperStyled>
 )
