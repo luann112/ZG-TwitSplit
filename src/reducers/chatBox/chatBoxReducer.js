@@ -37,9 +37,11 @@ const initialState = {
 // action creator
 
 const sampleAction = () => ({ type: SAMPLE_ACTION });
+const sendMessage = (connectionId, message) => ({ type: SEND_MESSAGE, connectionId, message });
 
 export const actions = {
   sampleAction,
+  sendMessage
 }
 
 const chatBoxReducer = (state = initialState, action) => {

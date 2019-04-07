@@ -17,7 +17,6 @@ export const InputMessageStyled = styled.div`
     height: 2em;
     outline: none;
     width: 97%;
-    /* height: 80%; */
     border: 2px solid #cbcbcb;
     padding: 5px 10px;
     border-radius: 5px;

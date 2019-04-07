@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { UsersBoxWrapperStyled } from './UserBox.styles';
+import { UsersBoxWrapperStyled } from './UsersBox.styles';
 import SearchBox from '../searchBox';
 import ConnectionsList from '../../containers/connectionsList';
 
