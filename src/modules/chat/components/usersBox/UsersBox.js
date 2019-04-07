@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import { UserBoxWrapperStyled } from './UserBox.styles';
+import { UsersBoxWrapperStyled } from './UserBox.styles';
 import SearchBox from '../searchBox';
 import ConnectionsList from '../../containers/connectionsList';
 
-class UserBox extends Component {
+class UsersBox extends Component {
   render() {
     return (
-      <UserBoxWrapperStyled>
+      <UsersBoxWrapperStyled>
         <SearchBox />
         <ConnectionsList />
-      </UserBoxWrapperStyled>
+      </UsersBoxWrapperStyled>
     );
   }
 }
 
-export default UserBox;
+export default UsersBox;

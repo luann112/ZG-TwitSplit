@@ -22,13 +22,13 @@ export const AvatarWrapperStyled = styled.div`
     }
   `}
   ${props => props.size === 'mini' && css`
-    width: 1.5em;
-    height: 1.5em;
+    width: 1.7em;
+    height: 1.7em;
     border: 1px solid lightblue;
 
     img {
-      width: 1.5em;
-      height: 1.5em;
+      width: 1.7em;
+      height: 1.7em;
     }
   `}
 `;

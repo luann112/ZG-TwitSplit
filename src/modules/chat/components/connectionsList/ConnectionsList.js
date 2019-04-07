@@ -7,12 +7,15 @@ import ConnectionItem from '../../containers/connectionItem';
 
 class ConnectionsList extends Component {
 
-  renderConnectionItem = (connection) => (
-    <ConnectionItem
-      key={connection.id}
-      connection={connection}
-    />
-  )
+  renderConnectionItem = (connection) => {
+    const { userId } = this.props;
+    return userId !== connection.id && (
+      <ConnectionItem
+        key={connection.id}
+        connection={connection}
+      />
+    );
+  }
 
   render() {
     const { connectionsListData = [] } = this.props;

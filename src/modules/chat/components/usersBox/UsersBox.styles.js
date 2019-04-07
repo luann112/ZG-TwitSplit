@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { boxShadow } from 'styles/common';
 import { slideToRight } from 'styles/animation';
 
-export const UserBoxWrapperStyled = styled.div`
+export const UsersBoxWrapperStyled = styled.div`
   display: flex;
   flex-direction: column;
   width: 35%;
