@@ -23,9 +23,9 @@ nextApp.prepare()
 
 
 socketIO.on('connection', (socket) => {
-  socketIO.sockets.emit('hello', 'hello');
-  socketIO.on(SOCKET_TYPES.NEW_MESSAGE, (data) => {
-    const { userId } = data;
-    socketIO.sockets.emit(`${SOCKET_TYPES.NEW_MESSAGE}_userId`, data);
+  console.log('Established a connection!')
+  socket.on(`${SOCKET_TYPES.NEW_MESSAGE}`, (data) => {
+    const { to } = data;    
+    socket.emit(`${SOCKET_TYPES.NEW_MESSAGE}_${to}`, data);
   });
 });

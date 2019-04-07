@@ -1,15 +1,21 @@
 import { eventChannel } from 'redux-saga';
-import { call, take, put } from 'redux-saga/effects';
+import { call, take, put, select } from 'redux-saga/effects';
 import io from 'socket.io-client';
+import { getUserId } from 'src/reducers/auth';
+import { SOCKET_TYPES } from 'lib/enums';
 
-const initializeSocket = () => eventChannel((emitter) => {
-  const socket = io();
-  socket.on('connect', () => {
-    socket.emit('hi');
-  })
-  socket.on('hello', (data) => {
-    console.log(' data ', data)
-    return emitter({ type: 'TEST'}); 
+const socket = io();
+
+export const emitMessage = (type, payload) => {
+  socket.emit(type, payload);
+}
+
+
+const initializeSocket = (userId) => eventChannel((emitter) => {
+
+  socket.on(`${SOCKET_TYPES.NEW_MESSAGE}_${userId}`, (data) => {
+    console.log(`${SOCKET_TYPES.NEW_MESSAGE}_${userId}`, data)    
+    return emitter({ type: 'TEST'});     
   })
   
   return () => {
@@ -19,7 +25,8 @@ const initializeSocket = () => eventChannel((emitter) => {
 
 
 export default function* socketSaga() {
-  const channel = yield call(initializeSocket);
+  const userId = yield select(getUserId);  
+  const channel = yield call(initializeSocket, userId);
   while (true) {
     const action = yield take(channel);
     yield put(action);

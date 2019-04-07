@@ -1,13 +1,13 @@
 import { connect } from 'react-redux';
 import ChatBoxInput from '../../components/chatBoxInput';
-import { actions } from 'src/reducers/usersBox';
+import { actions } from 'src/reducers/chatBox';
 
 const mapStateToProps = ({ usersBox }) => ({
   selectedConnectionId: usersBox.selectedConnectionId,
 });
 
 const mapDispatchToProps = {
-  selectConnection: actions.selectConnection
+  sendMessage: actions.sendMessage
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ChatBoxInput);

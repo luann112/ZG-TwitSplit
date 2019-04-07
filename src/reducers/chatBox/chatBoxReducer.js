@@ -1,5 +1,6 @@
-export const SAMPLE_ACTION = 'chatBox/SAMPLE_ACTION';
 export const SEND_MESSAGE = 'chatBox/SEND_MESSAGE';
+export const SEND_MESSAGE_ERROR = 'chatBox/SEND_MESSAGE_ERROR';
+export const SEND_MESSAGE_SUCCESS = 'chatBox/SEND_MESSAGE_SUCCESS';
 
 const initialChatData = {
   'broadcast': [
@@ -31,23 +32,26 @@ const initialChatData = {
 }
 
 const initialState = {
-  chatData: initialChatData
+  chatData: initialChatData,
+  error: null,
 };
 
 // action creator
 
-const sampleAction = () => ({ type: SAMPLE_ACTION });
 const sendMessage = (connectionId, message) => ({ type: SEND_MESSAGE, connectionId, message });
 
 export const actions = {
-  sampleAction,
   sendMessage
 }
 
 const chatBoxReducer = (state = initialState, action) => {
   const newState = Object.assign({}, state);
   switch (action.type) {
-    case SAMPLE_ACTION:
+    case SEND_MESSAGE:
+      newState.error = null;
+      return newState;
+    case SEND_MESSAGE_ERROR:
+      newState.error = action.error;
       return newState;
 
     default:
