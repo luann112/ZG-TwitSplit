@@ -17,14 +17,14 @@ function* sendMessage({ connectionId, message }) {
    if (message.length < 51) {
     const payload = { from: userId, to: connectionId, message };
     yield call(emitMessage, SOCKET_TYPES.NEW_MESSAGE, payload);
-    yield put({ type: SEND_MESSAGE_SUCCESS, payload })
+    yield put({ type: SEND_MESSAGE_SUCCESS, payload: { connection: connectionId, message, owner: userId} })
    } else {
     const chunks = yield call(splitMessage, message);
     for (let i = 0; i < chunks.length; i++) {
       const message = chunks[i].slice(chunks[i].indexOf(' ') + 1);
       const payload = { from: userId, to: connectionId, message };
       yield call(emitMessage, SOCKET_TYPES.NEW_MESSAGE, payload);
-      yield put({ type: SEND_MESSAGE_SUCCESS, payload });
+      yield put({ type: SEND_MESSAGE_SUCCESS, payload: { connection: connectionId, message, owner: userId} })
     }
    }
  } catch (error) {

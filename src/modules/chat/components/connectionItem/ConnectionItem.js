@@ -8,6 +8,7 @@ import {
 } from './ConnectionItem.styles';
 import Avatar from 'src/components/avatar';
 
+
 class ConnectionItem extends Component {
   selectConnection = () => {
     const { selectedConnectionId, selectConnection, connection = {} } = this.props;
@@ -21,7 +22,8 @@ class ConnectionItem extends Component {
     return (
       <ConnectionItemWrapperStyled
         onClick={this.selectConnection}
-        isActive={selectedConnectionId === id}>
+        isActive={selectedConnectionId === id}
+      >
         <Avatar size="small" src={avatar} />
         <ConnectionDetailStyled>
           <UserNameStyled>

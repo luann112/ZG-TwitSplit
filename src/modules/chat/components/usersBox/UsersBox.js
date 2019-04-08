@@ -4,6 +4,7 @@ import SearchBox from '../searchBox';
 import ConnectionsList from '../../containers/connectionsList';
 
 class UsersBox extends Component {
+  
   render() {
     return (
       <UsersBoxWrapperStyled>

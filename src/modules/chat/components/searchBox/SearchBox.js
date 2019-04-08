@@ -8,7 +8,18 @@ import {
 } from './SearchBox.styles';
 
 class SearchBox extends Component {
+  state = { keyword: ''}
+
+  onChange = (e) => {
+    const keyword = e.target.value;
+    this.setState({ keyword });
+  }
+
+  clearKeyword = () => {
+    this.setState({ keyword: '' })
+  }
   render() {
+    const { keyword } = this.state;
     return (
       <SearchBoxWrapperStyled>
         <SearchIconStyled>
@@ -17,10 +28,16 @@ class SearchBox extends Component {
         <SearchInputStyled 
           type="text"
           placeholder="Search user name"
+          value={keyword}
+          onChange={this.onChange}
         />
-        <ClearInputButtonStyled>
-          <Icon type="times" />
-        </ClearInputButtonStyled>
+        {
+          !!keyword.length && (
+            <ClearInputButtonStyled onClick={this.clearKeyword}>
+              <Icon type="times" />
+            </ClearInputButtonStyled>
+          )
+        }
       </SearchBoxWrapperStyled>
     );
   }

@@ -26,6 +26,6 @@ socketIO.on('connection', (socket) => {
   console.log('Established a connection!')
   socket.on(`${SOCKET_TYPES.NEW_MESSAGE}`, (data) => {
     const { to } = data;    
-    socket.emit(`${SOCKET_TYPES.NEW_MESSAGE}_${to}`, data);
+    socket.broadcast.emit(`${SOCKET_TYPES.NEW_MESSAGE}_${to}`, data);
   });
 });

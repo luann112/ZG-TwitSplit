@@ -34,5 +34,5 @@ export const LastMessageStyled = styled.div`
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  width: 55%;
+  width: 70%;
 `;

@@ -8,10 +8,10 @@ import ChatBoxMessage from '../chatBoxMessage';
 class ChatBoxContent extends Component {
   renderMessage = (messageItem, index) => {
     const { currentChatData, userId } = this.props;
-    const { connectionId, message } = messageItem;
-    const isIncoming = connectionId !== userId;
-    const shouldShowAvatar = index === 0 || connectionId !== currentChatData[index - 1].connectionId;
-    const avatar = getAvatar(connectionId);
+    const { owner, message } = messageItem;
+    const isIncoming = owner !== userId;
+    const shouldShowAvatar = index === 0 || owner !== currentChatData[index - 1].owner;
+    const avatar = getAvatar(owner);
     return (
       <ChatBoxMessage
         key={index}

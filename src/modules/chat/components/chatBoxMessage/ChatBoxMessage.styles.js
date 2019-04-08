@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { slideToTop } from 'styles/animation';
 
 export const ChatBoxMessageWrapperStyled = styled.div`
   display: flex;
@@ -7,6 +8,7 @@ export const ChatBoxMessageWrapperStyled = styled.div`
   ${props => !props.isIncoming && css`
     flex-direction: row-reverse;
   `}
+  animation: ${slideToTop};
 `;
 
 export const MessageStyled = styled.div`
