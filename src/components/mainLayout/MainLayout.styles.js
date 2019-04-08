@@ -4,6 +4,7 @@ export const MainLayoutWrapperStyled = styled.div`
   position: relative;
   display: flex;
   height: 100vh;
+  flex-direction: column;
   background-color: rgb(239, 239, 239);
 `;
 

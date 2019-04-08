@@ -11,6 +11,16 @@ export const AvatarWrapperStyled = styled.div`
     border-radius: 50%;
     object-fit: contain;
   }
+  ${props => props.size === 'xsmall' && css`
+    width: 2.5em;
+    height: 2.5em;
+    border: 1px solid lightblue;
+
+    img {
+      width: 2.5em;
+      height: 2.5em;
+    }
+  `}
   ${props => props.size === 'small' && css`
     width: 3.1em;
     height: 3.1em;
