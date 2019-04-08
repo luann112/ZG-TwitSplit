@@ -15,9 +15,7 @@ export const emitMessage = (type, payload) => {
 const initializeSocket = (userId) => eventChannel((emitter) => {
 
   socket.on(`${SOCKET_TYPES.NEW_MESSAGE}_broadcast`, (data) => {
-    console.log('data.from !== userId - ', data.from, userId)
     if (data.from !== userId) {
-      console.log(`${SOCKET_TYPES.NEW_MESSAGE}_broadcast`)
       const { from, to, message } = data;
       const payload = {
         connection: to, // broadcast channel
@@ -26,10 +24,8 @@ const initializeSocket = (userId) => eventChannel((emitter) => {
       }
       return emitter({ type: NEW_MESSAGE, payload });     
     }
-    console.log(`${SOCKET_TYPES.NEW_MESSAGE}__broadcast`, data)    
   })
   socket.on(`${SOCKET_TYPES.NEW_MESSAGE}_${userId}`, (data) => {
-    console.log(`${SOCKET_TYPES.NEW_MESSAGE}_${userId}`, data) 
     const { from, to, message } = data;  
     const payload = {
       connection: from,
@@ -47,7 +43,6 @@ const initializeSocket = (userId) => eventChannel((emitter) => {
 function* socketHandler() {
   try {
     const userId = yield select(getUserId);
-    console.log('userId - ', userId);
     const channel = yield call(initializeSocket, userId);    
     while (true) {
       const action = yield take(channel);
