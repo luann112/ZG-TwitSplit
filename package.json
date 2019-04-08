@@ -5,10 +5,15 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon -w server server/server.js --exec babel-node",
-    "build": "next build"
+    "build": "next build",
+    "test": "jest"
   },
   "author": "Luan Nguyen",
   "license": "ISC",
+  "jest": {
+    "setupFiles": ["./setupTests.js"],
+    "testPathIgnorePatterns": ["node_modules"]    
+  },
   "dependencies": {
     "express": "^4.16.4",
     "next": "^8.0.3",
@@ -28,9 +33,13 @@
     "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.4.3",
     "@babel/preset-flow": "^7.0.0",
+    "babel-jest": "^24.7.1",
     "babel-plugin-module-resolver": "^3.2.0",
     "babel-plugin-styled-components": "^1.10.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
     "eslint": "^5.14.1",
+    "jest": "^24.7.1",
     "nodemon": "^1.18.10",
     "redux-devtools-extension": "^2.13.8",
     "redux-logger": "^3.0.6"
