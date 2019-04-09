@@ -7,7 +7,8 @@ const mapStateToProps = ({ usersBox }) => ({
 });
 
 const mapDispatchToProps = {
-  selectConnection: actions.selectConnection
+  toggleUsersTab: actions.toggleUsersTab,
+  selectConnection: actions.selectConnection,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ConnectionItem);

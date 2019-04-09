@@ -4,16 +4,17 @@ import {
   ConnectionDetailStyled,
   UserNameStyled,
   LastMessageStyled,
-  LastActivityStyled
 } from './ConnectionItem.styles';
 import Avatar from 'src/components/avatar';
 
-
 class ConnectionItem extends Component {
   selectConnection = () => {
-    const { selectedConnectionId, selectConnection, connection = {} } = this.props;
+    const { selectedConnectionId, selectConnection, connection = {}, toggleUsersTab } = this.props;
     if (selectedConnectionId !== connection.id && selectConnection && typeof selectConnection === 'function') {
       selectConnection(connection.id, connection.name);
+    }
+    if (toggleUsersTab && typeof toggleUsersTab === 'function') {
+      toggleUsersTab();
     }
   }
   render() {

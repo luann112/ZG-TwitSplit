@@ -1,15 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { UsersTabWrapperStyled } from './UsersTab.styles';
 import UsersBox from '../usersBox';
 
-class UsersTab extends Component {
-  render() {
-    return (
-      <UsersTabWrapperStyled>
-        <UsersBox />
-      </UsersTabWrapperStyled>
-    );
-  }
-}
+const UsersTab = ({ isShowUsersTab }) => (
+  <UsersTabWrapperStyled isShowUsersTab={isShowUsersTab}>
+    <UsersBox />
+  </UsersTabWrapperStyled>
+);
 
 export default UsersTab;
