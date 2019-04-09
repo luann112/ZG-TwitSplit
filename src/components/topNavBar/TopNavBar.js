@@ -3,7 +3,6 @@ import Router from 'next/router';
 import { 
   TopNavBarWrapperStyled,
   TopNavBarStyled,
-  ProfileWrapperStyled,
   LogoStyled,
   UsersIconStyled,
  } from './TopNavBar.styles';
@@ -21,12 +20,17 @@ class TopNavBar extends PureComponent {
   }
 
   render() {
+    const { userId } = this.props;
     return (
       <TopNavBarWrapperStyled>
         <TopNavBarStyled>
-          <UsersIconStyled onClick={this.toggleUsersTab}>
-            <Icon type="users"/>
-          </UsersIconStyled>
+          {
+            userId !== null ? (
+            <UsersIconStyled onClick={this.toggleUsersTab}>
+              <Icon type="users"/>
+            </UsersIconStyled>
+            ) : <div />
+          }
           <LogoStyled onClick={this.toHome}>
             <span>TwitSplit</span>
           </LogoStyled>
