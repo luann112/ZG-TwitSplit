@@ -8,11 +8,21 @@ import {
 } from './SearchBox.styles';
 
 class SearchBox extends Component {
-  state = { keyword: ''}
+  state = { keyword: '' }
+
+  updateKeyword = () => {
+    const { updateKeyword } = this.props;
+    const { keyword } = this.state;
+    updateKeyword(keyword);
+  }
 
   onChange = (e) => {
     const keyword = e.target.value;
     this.setState({ keyword });
+    if (this.timeOutHandler) {
+      clearTimeout(this.timeOutHandler);
+    }
+    this.timeOutHandler = setTimeout(this.updateKeyword, 300);
   }
 
   clearKeyword = () => {

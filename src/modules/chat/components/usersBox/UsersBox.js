@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { UsersBoxWrapperStyled } from './UsersBox.styles';
-import SearchBox from '../searchBox';
+import SearchBox from '../../containers/searchBox';
 import ConnectionsList from '../../containers/connectionsList';
 
 class UsersBox extends Component {

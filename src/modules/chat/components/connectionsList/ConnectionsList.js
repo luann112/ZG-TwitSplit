@@ -6,6 +6,27 @@ import ConnectionItem from '../../containers/connectionItem';
 
 
 class ConnectionsList extends Component {
+  constructor(props) {
+    super(props);
+    const { connectionsListData = [], keyword } = this.props;
+    this.state = {
+      connectionsListData,
+      keyword
+    }
+  }
+
+  static getDerivedStateFromProps(nextProps, prevState) {
+    const { keyword, connectionsListData } = nextProps;
+    if (keyword !== prevState.keyword) {
+      const filteredList = keyword === '' ? connectionsListData :
+      connectionsListData.filter(item => item.name.includes(keyword));
+      return {
+        keyword,
+        connectionsListData: filteredList
+      }
+    }
+    return null;
+  }
 
   renderConnectionItem = (connection) => {
     const { userId } = this.props;
@@ -18,7 +39,7 @@ class ConnectionsList extends Component {
   }
 
   render() {
-    const { connectionsListData = [] } = this.props;
+    const { connectionsListData = [] } = this.state;
     return (
       <ConnectionsListWrapperStyled>
         {connectionsListData.map(this.renderConnectionItem)}
