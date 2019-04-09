@@ -1,9 +1,13 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const ProfileWrapperStyled = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  visibility: hidden;
+  ${props => props.isVisible && css`
+    visibility: visible;
+  `}
 `;
 
 export const UserNameStyled = styled.div`

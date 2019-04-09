@@ -6,8 +6,8 @@ import {
 import { getAvatar } from 'lib/utils';
 import Avatar from '../avatar';
 
-const Profile = ({ userId, userName }) => userId && (
-  <ProfileWrapperStyled>
+const Profile = ({ userId, userName }) => (
+  <ProfileWrapperStyled isVisible={userId !== null}>
     <UserNameStyled>{userName}</UserNameStyled>
     <Avatar size="xsmall" src={getAvatar(userId)} />    
   </ProfileWrapperStyled>

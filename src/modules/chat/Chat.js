@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Router from 'next/router';
-import { ChatWrapperStyled } from './Chat.styles';
+import { ChatWrapperStyled, InnerWrapperStyled } from './Chat.styles';
 import ChatBox from './components/chatBox';
 import UsersBox from './components/usersBox';
 
@@ -15,8 +15,12 @@ class Chat extends Component {
   render() {
     return (
       <ChatWrapperStyled className="container">
+      <InnerWrapperStyled usersBox>
         <UsersBox />
+      </InnerWrapperStyled>
+      <InnerWrapperStyled chatBox>
         <ChatBox />
+      </InnerWrapperStyled>
       </ChatWrapperStyled>
     );
   }

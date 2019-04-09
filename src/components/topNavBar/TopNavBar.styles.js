@@ -40,3 +40,13 @@ export const LogoStyled = styled.div`
     }
   }
 `;
+
+export const UsersIconStyled = styled.div`
+  align-items: center;
+  font-size: 1.6em;
+  cursor: pointer;
+  display: none;
+  @media (max-width: 768px) {
+    display: flex;
+  }
+`;
