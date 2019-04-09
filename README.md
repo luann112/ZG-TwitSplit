@@ -25,9 +25,10 @@ Each message is now 49 characters, each within the allowed limit.
 # Screenshots
 - The applicaion is compatible on all screen size.
 - At the first page you have to choose one user.
-Screen Shot 2019-04-09 at 11.08.29 PM
-Screen Shot 2019-04-09 at 11.08.45 PM
+<img src="https://github.com/luann112/ZG-Tweeter/blob/master/screenShots/Screen%20Shot%202019-04-09%20at%2011.08.29%20PM.png" width="500px" height="500"/>
+<img src="https://github.com/luann112/ZG-Tweeter/blob/master/screenShots/Screen%20Shot%202019-04-09%20at%2011.08.45%20PM.png" width="500px" height="500"/>
 - At the chat page you could choose any channels to send the message. You can use another tab with a nother user to make the conversation.
-Screen Shot 2019-04-09 at 11.19.21 PM
-Screen Shot 2019-04-09 at 11.19.38 PM
-Screen Shot 2019-04-09 at 11.11.27 PM
+<img src="https://github.com/luann112/ZG-Tweeter/blob/master/screenShots/Screen%20Shot%202019-04-09%20at%2011.19.21%20PM.png" width="500px" height="500"/>
+<img src="https://github.com/luann112/ZG-Tweeter/blob/master/screenShots/Screen%20Shot%202019-04-09%20at%2011.11.27%20PM.png" width="500px" height="500"/>
+<img src="https://github.com/luann112/ZG-Tweeter/blob/master/screenShots/Screen%20Shot%202019-04-09%20at%2011.19.38%20PM.png" width="500px" height="500"/>
+
