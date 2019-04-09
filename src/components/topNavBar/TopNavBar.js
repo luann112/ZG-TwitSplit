@@ -5,6 +5,7 @@ import {
   TopNavBarStyled,
   LogoStyled,
   UsersIconStyled,
+  CommonWrapperStyled,
  } from './TopNavBar.styles';
  import Profile from '../../containers/profile';
  import Icon from '../icon';
@@ -29,7 +30,7 @@ class TopNavBar extends PureComponent {
             <UsersIconStyled onClick={this.toggleUsersTab}>
               <Icon type="users"/>
             </UsersIconStyled>
-            ) : <div />
+            ) : <CommonWrapperStyled />
           }
           <LogoStyled onClick={this.toHome}>
             <span>TwitSplit</span>

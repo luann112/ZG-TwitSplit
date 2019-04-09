@@ -50,3 +50,10 @@ export const UsersIconStyled = styled.div`
     display: flex;
   }
 `;
+
+export const CommonWrapperStyled = styled.div`
+  display: none;
+  @media (max-width: 768px) {
+    display: flex;
+  }
+`;
