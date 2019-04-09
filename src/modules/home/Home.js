@@ -3,12 +3,9 @@ import { connect } from 'react-redux';
 import { actions } from 'src/reducers/auth';
 import {
   HomeWrapperStyled,
-  UserWrapperStyled,
   TextStyled,
   UsersWrapperStyled,
-  UserNameStyled
 } from './Home.styles';
-import Avatar from 'src/components/avatar';
 import { SAMPLE_USERS } from 'lib/enums';
 import UserTile from './components/userTile';
 

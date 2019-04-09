@@ -11,8 +11,10 @@
   "author": "Luan Nguyen",
   "license": "ISC",
   "jest": {
-    "setupFiles": ["./setupTests.js"],
-    "testPathIgnorePatterns": ["node_modules"]    
+    "testEnvironment": "node",
+    "setupFiles": ["<rootDir>/setupTests.js"],
+    "testPathIgnorePatterns": ["node_modules"],
+    "testMatch": ["<rootDir>/**/*.test.js"]    
   },
   "dependencies": {
     "express": "^4.16.4",

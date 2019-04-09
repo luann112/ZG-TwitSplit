@@ -1,7 +1,5 @@
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import Chat from './Chat';
-import ChatBox from './components/chatBox';
-import UsersBox from './components/usersBox';
 
 describe('<Chat />', () => {
   const chatComponent1 = shallow(<Chat />);
