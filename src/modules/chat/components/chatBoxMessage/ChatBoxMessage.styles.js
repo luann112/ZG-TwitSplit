@@ -24,4 +24,15 @@ export const MessageStyled = styled.div`
   ${props => props.isIncoming && css`
     background: #eaedf0;
   `}
+  ${props => props.isError && css`
+    background: rgba(217, 30, 24, .69);
+    color: #fff;
+  `}
+`;
+
+export const CommonWrapperStyled = styled.div`
+  visibility: hidden;
+  ${props => props.isVisible && css`
+    visibility: visible;
+  `}
 `;

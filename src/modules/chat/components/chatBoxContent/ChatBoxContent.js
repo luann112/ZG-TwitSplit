@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {
-  ChatBoxContentWrapperStyled
+  ChatBoxContentWrapperStyled,
+  ErrorStyled
 } from './ChatBoxContent.styles';
-import { SAMPLE_USERS } from 'lib/enums';
 import { getAvatar } from 'lib/utils';
 import ChatBoxMessage from '../chatBoxMessage';
 class ChatBoxContent extends Component {
@@ -22,11 +22,21 @@ class ChatBoxContent extends Component {
       />
     );
   }
+  renderErrorMessage = () => {
+    const { error } = this.props;
+    return error && (
+      <ChatBoxMessage
+        message="Error message!"
+        isError
+      />
+    );
+  }
   render() {
     const { currentChatData } = this.props;
     return (
       <ChatBoxContentWrapperStyled>
         {currentChatData.map(this.renderMessage)}
+        {this.renderErrorMessage()}        
       </ChatBoxContentWrapperStyled>
     );
   }

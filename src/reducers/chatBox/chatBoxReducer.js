@@ -29,6 +29,7 @@ const chatBoxReducer = (state = initialState, action) => {
     case NEW_MESSAGE:
     case SEND_MESSAGE_SUCCESS: {
       const { connection, owner, message } = action.payload;
+      newState.error = null;
       const newChatData = {
         ...state.chatData,
         [connection]: [

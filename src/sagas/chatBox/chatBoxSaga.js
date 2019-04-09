@@ -28,7 +28,7 @@ function* sendMessage({ connectionId, message }) {
     }
    }
  } catch (error) {
-   yield put({ type: SEND_MESSAGE_ERROR, error });
+   yield put({ type: SEND_MESSAGE_ERROR, error: error.message });
  }
 }
 
